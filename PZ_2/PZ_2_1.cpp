@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <Windows.h>
 #include <cmath>
 
@@ -11,16 +11,16 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	int number, number1, number2, answer;
-	cout << "Ââåäèòå äâóõçíà÷íîå ÷èñëî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð²ÑƒÑ…Ð·Ð½Ð°Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 	cin >> number;
 	if (9 < number and number < 100) {
 		number1 = number % 10;
 		number2 = number / 10;
 		answer = number1 * 10 + number2;
-		cout << "Îòâåò òàêîé: " << answer << endl;
+		cout << "ÐžÑ‚Ð²ÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð¹: " << answer << endl;
 	}
 	else {
-		cout << "Íåâåðíî ââåäåíû äàííûå" << endl;
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½Ñ‹ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl;
 	}
 	return 0;
 }
