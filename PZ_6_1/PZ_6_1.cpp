@@ -7,40 +7,37 @@
 #include <Windows.h>
 #include <cmath>
 #include <random>
-#include <list>
-#include <iterator>
-#include <algorithm>
 
 using namespace std;
 
 int main() {
-	int n, a, b, * m;
-	list <int> mylist;
-	cout << "Введите кол-во чисел в списке: ";
-	cin >> n;
+	using namespace std;
 
-	for (int i = 0; i < n; i++)
-	{
-		m += (rand() % 10);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	int arr[10], num[10], i;
+
+	for (i = 0; i < 10; i++)
+		arr[i] = 1 + rand() % 20;
+	for (i = 0; i < 10; i++)
+		cout << arr[i] << " ";
+
+	cout << endl <<"Четные номера: ";
+
+	for (int i = 0; i < 10;){
+		cout << arr[i] << " ";
+		i += 2;
 	}
 
+	cout << endl << "Нечетные номера: ";
 
-	copy_if(begin(m), end(m), back_inserter(mylist), [](const int x) { return x % 2; });
-	mylist.sort([](const int a, const int b) { return a > b; });
-	cout << "Нечётные числа (" << mylist.size() << " - элементов): ";
-	for (int i : mylist)
-		cout << i << ' ';
+	for (int i = 1; i < 10;) {
+		cout << arr[i] << ' ';
+		i += 2;
+	}
 
-	mylist.clear();
-
-	copy_if(begin(m), end(m), back_inserter(mylist), [](const int x) { return (x + 1) % 2; }); //чётные числа
-
-	mylist.sort([](const int a, const int b) { return a < b; });   //по возрастанию
-
-	cout << "\nЧётные числа(" << mylist.size() << " - элементов): ";
-
-	for (int i : mylist)
-		cout << i << ' ';
+	return 0;
 }
 
 
